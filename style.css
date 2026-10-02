@@ -1,0 +1,180 @@
+/* Variáveis para facilitar a gestão de cores e estilos corporativos */
+:root {
+    --cor-fundo: #f4f6f9;
+    --cor-card: #ffffff;
+    --cor-principal: #2c3e50;
+    /* Cinza-escuro corporativo */
+    --cor-secundaria: #0088cc;
+    /* Azul-celeste para destaques */
+    --cor-texto: #333333;
+    --cor-texto-suave: #666666;
+    --cor-borda: #e1e8ed;
+    --cor-sucesso: #2e7d32;
+    --cor-alerta: #c62828;
+    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Reset básico de margens e fontes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 6px solid var(--cor-secundaria);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: #d1d5db;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Cards de Resumo */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    padding: 20px;
+    border-radius: 12px;
+    /* Cantos arredondados suaves */
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    border-top: 4px solid var(--cor-secundaria);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.card-valor {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.card-status {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--cor-secundaria);
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* Container e Tabela Responsiva */
+.tabela-container {
+    background-color: var(--cor-card);
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    overflow-x: auto;
+    /* Garante rolagem horizontal em telas pequenas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+thead {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Estilos das Situações */
+.situacao-bom {
+    color: var(--cor-sucesso);
+    font-weight: 600;
+}
+
+.situacao-atencao {
+    color: var(--cor-alerta);
+    font-weight: 600;
+}
+
+.situacao-indisponivel {
+    color: var(--cor-texto-suave);
+    font-style: italic;
+}
+
+/* Ajustes para telas pequenas / celular */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}

@@ -139,4 +139,211 @@ tbody tr:hover {
 }
 
 .situacao-atencao {
-    color: var(--
+    color: var(--cor-alerta);
+    font-weight: 600;
+}
+
+.situacao-indisponivel {
+    color: var(--cor-texto-suave);
+    font-style: italic;
+}
+
+/* Ajustes para telas pequenas / celular */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   Estilos Adicionais para a Etapa 2 (Acesso, Mensagens e Edição)
+   ========================================================================== */
+
+/* Área de Login */
+.login-box {
+    background-color: var(--cor-card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+.login-box h2 {
+    font-size: 1.3rem;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 8px;
+}
+
+.login-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+}
+
+.login-form input {
+    padding: 10px 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-color: var(--cor-secundaria);
+}
+
+.login-form button, #btn-alterar-dados, #btn-salvar-dados, .btn-secundario {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.login-form button:hover, #btn-alterar-dados:hover, #btn-salvar-dados:hover {
+    background-color: #0077b3;
+}
+
+.btn-secundario {
+    background-color: #78909c;
+}
+
+.btn-secundario:hover {
+    background-color: #607d8b;
+}
+
+/* Painel de Ações */
+.painel-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Mensagens de Status */
+.mensagem-status {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.mensagem-sucesso {
+    color: var(--cor-sucesso);
+}
+
+.mensagem-erro {
+    color: var(--cor-alerta);
+}
+
+.mensagem-info {
+    color: var(--cor-secundaria);
+}
+
+/* Área de Edição */
+.edicao-container {
+    background-color: var(--cor-card);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    margin-top: 30px;
+}
+
+.edicao-container h2 {
+    font-size: 1.3rem;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 8px;
+}
+
+.edicao-card {
+    background-color: #f8fafc;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.edicao-card h3 {
+    font-size: 1rem;
+    color: var(--cor-principal);
+    margin-bottom: 12px;
+}
+
+.edicao-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo-grupo label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-suave);
+}
+
+.campo-grupo input {
+    padding: 6px 8px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.campo-grupo input.campo-invalido {
+    border-color: var(--cor-alerta);
+    background-color: #ffebee;
+}
+
+.edicao-botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}

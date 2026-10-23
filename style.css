@@ -1,5 +1,4 @@
-/* Variáveis para facilitar a gestão de cores e estilos corporativos */
-:root {
+root {
     --cor-fundo: #f4f6f9;
     --cor-card: #ffffff;
     --cor-principal: #2c3e50;      /* Cinza-escuro corporativo */
@@ -140,35 +139,4 @@ tbody tr:hover {
 }
 
 .situacao-atencao {
-    color: var(--cor-alerta);
-    font-weight: 600;
-}
-
-.situacao-indisponivel {
-    color: var(--cor-texto-suave);
-    font-style: italic;
-}
-
-/* Ajustes para telas pequenas / celular */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    header {
-        padding: 15px 20px;
-    }
-
-    header h1 {
-        font-size: 1.4rem;
-    }
-
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    th, td {
-        padding: 10px;
-        font-size: 0.85rem;
-    }
-}
+    color: var(--

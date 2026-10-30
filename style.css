@@ -347,3 +347,95 @@ tbody tr:hover {
     gap: 10px;
     margin-top: 20px;
 }
+
+/* ==========================================================================
+   Estilos da Etapa 3 — Gráficos
+   ========================================================================== */
+
+.area-graficos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.grafico-card {
+    background-color: var(--cor-card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--cor-borda);
+    border-top: 4px solid var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grafico-card h2 {
+    font-size: 1.05rem;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.grafico-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.grafico-card-header h2 {
+    margin-bottom: 0;
+}
+
+.grafico-container {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-height: 260px;
+}
+
+/* Badge de Perigo para o Card de Faltas */
+.badge-perigo {
+    background-color: var(--cor-alerta);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card em Perigo */
+.grafico-card.card-perigo {
+    border-color: var(--cor-alerta);
+    border-top: 4px solid var(--cor-alerta);
+    box-shadow: 0 4px 14px rgba(198, 40, 40, 0.15);
+}
+
+/* Media Queries para Responsividade dos Gráficos */
+@media (max-width: 992px) {
+    .area-graficos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .area-graficos .grafico-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .area-graficos {
+        grid-template-columns: 1fr;
+    }
+
+    .area-graficos .grafico-card:last-child {
+        grid-column: span 1;
+    }
+
+    .grafico-container {
+        min-height: 220px;
+    }
+}
